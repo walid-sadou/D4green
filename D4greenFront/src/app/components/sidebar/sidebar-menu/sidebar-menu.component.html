@@ -1,0 +1,27 @@
+
+<div class="dropdown">
+  <li class="nav-item custom-nav" [ngClass]="borderClass" (click)="clicked()">
+    <a class="nav-link custom-nav collapsed active"
+      (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed"
+      aria-controls="sub" routerLink="/{{ menu.getName() }}"
+      routerLinkActive="active">
+      <i class="{{ menu.getIcon() }}"></i>
+      <span *ngIf=active>&nbsp;&nbsp;{{ menu.getName() }}</span>
+    </a>
+  </li>
+  <div id="sub" class="collapse" [ngbCollapse]="isCollapsed" *ngIf=active>
+    <div *ngFor="let submenu of menu.getMenus()" class="sub">
+      <li class="nav-item custom-nav">
+        <a class="nav-link custom-nav" routerLink="/{{ menu.getName() }}/{{ submenu }}"><i class="fas fa-circle fa-xs"></i>&nbsp;&nbsp;{{ submenu }}</a>
+      </li>
+    </div>
+  </div>
+  <div class="dropdown-content" *ngIf=!active>
+    <div *ngFor="let submenu of menu.getMenus()" class="sub">
+      <a routerLink="/{{ menu.getName() }}/{{ submenu }}">&nbsp;&nbsp;{{ submenu }}</a>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,318 @@
+/* You can add global styles to this file, and also import other style files */
+/*
+body {
+    background-color: #f7f9fb;
+    font-family: 'Lato', sans-serif;
+}
+*/
+
+html,
+body {
+    height: 100%;
+}
+
+.ui.dimmer {
+    background-color: rgba(203, 203, 203, .5);
+}
+
+
+/* Outline titles */
+.section-title {
+    border-bottom: 1px solid rgb(212, 221, 228);
+    margin-top: 0.5em;
+}
+
+.section-title, .myButton {
+    margin-bottom: 0.5em;
+}
+
+.searchBar lsu-dropdown .ui.fluid.dropdown {
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    width: 14em;
+    border-radius: 0;
+}
+
+.searchBar lsu-dropdown .ui.selection.active.dropdown .menu {
+    border-color: #04b7a8
+}
+
+.searchBar lsu-dropdown .ui.fluid.dropdown>.dropdown.icon {
+    padding-top: 12px;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active {
+    border: 1px solid #1a2891;
+    background-color: #2a9eb7;
+}
+
+.ui.selection.dropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ui.selection.dropdown:hover {
+    border-color: #2a9eb7;
+}
+
+.ui.dropdown .menu>.item:hover {
+    background-color: #2a9eb7;
+    color: #ffffff;
+}
+
+.ui.dropdown .menu .active.item {
+    background-color: #2a9eb7;
+}
+
+.ui.label.visible:not(.dropdown) {
+    background-color: #2a9eb7;
+    color: #ffffff
+}
+
+.ui.checkbox input.hidden+label::before {
+    border-radius: 4px;
+}
+
+.ui.checkbox input:checked~.box:before,
+.ui.checkbox input:checked~label:before {
+    background-color: #2a9eb7;
+    border: 1px solid #2a9eb7;
+}
+
+.ui.checkbox input:checked~.box:after,
+.ui.checkbox input:checked~label:after {
+    color: #ffffff;
+}
+
+@keyframes lds-pacman-1 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes lds-pacman-1 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes lds-pacman-2 {
+    0% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    50% {
+        -webkit-transform: rotate(225deg);
+        transform: rotate(225deg);
+    }
+    100% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+
+@-webkit-keyframes lds-pacman-2 {
+    0% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    50% {
+        -webkit-transform: rotate(225deg);
+        transform: rotate(225deg);
+    }
+    100% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes lds-pacman-3 {
+    0% {
+        -webkit-transform: translate(190px, 0);
+        transform: translate(190px, 0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate(70px, 0);
+        transform: translate(70px, 0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes lds-pacman-3 {
+    0% {
+        -webkit-transform: translate(190px, 0);
+        transform: translate(190px, 0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate(70px, 0);
+        transform: translate(70px, 0);
+        opacity: 1;
+    }
+}
+
+.lds-pacman {
+    position: relative;
+}
+
+.lds-pacman>div:nth-child(2) div {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 120px;
+    height: 60px;
+    border-radius: 120px 120px 0 0;
+    background: #2a9eb7;
+    -webkit-animation: lds-pacman-1 0.4s linear infinite;
+    animation: lds-pacman-1 0.4s linear infinite;
+    -webkit-transform-origin: 60px 60px;
+    transform-origin: 60px 60px;
+}
+
+.lds-pacman>div:nth-child(2) div:nth-child(2) {
+    -webkit-animation: lds-pacman-2 0.4s linear infinite;
+    animation: lds-pacman-2 0.4s linear infinite;
+}
+
+.lds-pacman>div:nth-child(1) div {
+    position: absolute;
+    top: 92px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #2a9eb7;
+    -webkit-animation: lds-pacman-3 0.4s linear infinite;
+    animation: lds-pacman-3 0.4s linear infinite;
+}
+
+.lds-pacman>div:nth-child(1) div:nth-child(1) {
+    -webkit-animation-delay: -0.268s;
+    animation-delay: -0.268s;
+}
+
+.lds-pacman>div:nth-child(1) div:nth-child(2) {
+    -webkit-animation-delay: -0.132s;
+    animation-delay: -0.132s;
+}
+
+.lds-pacman>div:nth-child(1) div:nth-child(3) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.lds-pacman {
+    width: 46px !important;
+    height: 46px !important;
+    -webkit-transform: translate(-23px, -23px) scale(0.23) translate(23px, 23px);
+    transform: translate(-23px, -23px) scale(0.23) translate(23px, 23px);
+}
+
+@keyframes lds-rolling {
+    0% {
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@-webkit-keyframes lds-rolling {
+    0% {
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.lds-rolling {
+    position: relative;
+}
+
+.lds-rolling div,
+.lds-rolling div:after {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #2a9eb7;
+    border-top-color: transparent;
+    border-radius: 50%;
+}
+
+.lds-rolling div {
+    -webkit-animation: lds-rolling 1s linear infinite;
+    animation: lds-rolling 1s linear infinite;
+    top: 25px;
+    left: 100px;
+}
+
+.lds-rolling div:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.lds-rolling {
+    width: 50px !important;
+    height: 50px !important;
+    -webkit-transform: translate(-50px, -50px) scale(1) translate(50px, 50px);
+    transform: translate(-50px, -50px) scale(1) translate(50px, 50px);
+}
+
+.spinner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 9999;
+}
+
+.spinner>img {
+    position: relative;
+    left: 45%;
+    top: 40%;
+    width:80px;
+    height:80px;
+}
+
+.hide {
+    display: none;
+}
+
+.pointer {
+    cursor: pointer;
+}

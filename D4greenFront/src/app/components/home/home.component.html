@@ -1,0 +1,23 @@
+<div class="searchbar-wrapper">
+  <form class="form-group row" (ngSubmit)="searchNavigate(siren)">
+      <input type="text" placeholder="SIREN" name="companySearch" [(ngModel)]="siren" class="form-control offset-md-3 col-md-4">
+      <button type="submit" class="btn btn-info btn-themed col-md-2">Recherche</button>
+  </form>
+</div>
+
+
+
+<div class="offset-md-2 col-md-8 text-center list-wrapper">
+  <h1 class="text-left list-title">Opérations reçues</h1>
+  <app-list [listConf]="this.listConfOpRecue"
+            (refreshDone)="listRefreshDone()"
+            (approveOrReject)="approveOrReject()"></app-list>
+</div>
+
+
+<div class="offset-md-2 col-md-8 text-center list-wrapper">
+  <h1 class="text-left list-title">Opérations emises</h1>
+  <app-list [listConf]="this.listConfOpEmise"
+            (refreshDone)="listRefreshDone"></app-list>
+</div>
+

@@ -1,0 +1,28 @@
+<div class="offset-md-2 col-md-8 text-center list-wrapper">
+  <h1 class="text-left list-title">Abonnement</h1>
+  <table *ngIf="!error" class="table" style="margin-top: 30px;">
+    <thead>
+      <tr>
+        <th class="title-md">SIREN</th>
+        <th class="title-lg">DROIT</th>
+        <th class="title-lg">MONTANT MENSUEL </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of abonnements">
+        <th>{{ a }}</th>
+        <td>Transfert</td>
+        <td> 10 € </td>
+      </tr>
+      <tr>
+        <th>TOTAL</th>
+        <td></td>
+        <td>{{ getSumAbonnements() }} €</td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="error" class="col-md-6 offset-md-3 text-center text-justify text-danger">
+    <p>{{ errorMsg }}</p>
+  </div>
+</div>
+

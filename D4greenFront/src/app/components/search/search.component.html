@@ -1,0 +1,41 @@
+<div class="searchbar-wrapper">
+  <form class="form-group row" (ngSubmit)="searchNavigate(siren)">
+    <input type="text" placeholder="SIREN" name="companySearch" [(ngModel)]="siren" class="form-control offset-md-3 col-md-4">
+    <button type="submit" class="btn btn-info btn-themed col-md-2">Rechercher</button>
+  </form>
+
+  <!-- Check if use of found is OK -->
+  <div *ngIf="searching" class="col-md-6 offset-md-3 text-center text-justify not-found spacingTopBottom">
+    <i class="fa fa-spinner fa-spin"></i>
+  </div>
+  <div *ngIf="siren_searched && !deja_abonne && !errGetTransferts" class="col-md-6 offset-md-3 text-center text-justify not-found spacingTopBottom">
+    <p>Vous n'êtes pas abonné au SIREN {{ lastRequestedSiren }}</p>
+    <button *ngIf="!subscribing" class="btn btn-info" (click)=subscribeToSiren()>S'abonner</button>
+    <button *ngIf="subscribing" class="btn btn-info">
+      <i class="fa fa-spinner fa-spin"></i>
+    </button>
+    <!--
+    <button class="btn btn-info" (click)=Clickconsultation()>Consulter ponctuellement</button>
+    -->
+  </div>
+  <div *ngIf="no_document && siren_searched" class="col-md-6 offset-md-3 text-center text-justify spacingTopBottom">
+    <p>Aucun transfert effectué</p>
+  </div>
+
+  <div *ngIf="errGetTransferts" class="col-md-6 offset-md-3 text-center text-justify text-danger">
+    <p>{{ errMsgGetTransferts }}</p>
+  </div>
+
+  <div *ngIf="err_subscribing" class="col-md-6 offset-md-3 text-center text-justify text-danger">
+    <p>{{ errMsgSubscribing }}</p>
+  </div>
+
+  <!-- Check if use of found is OK -->
+
+</div>
+
+<div class="offset-md-2 col-md-8 text-center list-wrapper">
+  <h1 class="text-left list-title">Transferts</h1>
+  <app-list [listConf]="this.listSubscribed"
+            (approveOrReject)="approveOrReject()"></app-list>
+</div>

@@ -1,0 +1,49 @@
+.searchbar-wrapper {
+  background-color: rgb(227, 234, 242);
+  min-height: 150px;
+  width: 100%;
+  // Dirty hard coded for vertical align
+  padding-top: 55px;
+}
+
+.btn-themed {
+  background-color:  #2A9FD8;
+}
+
+.btn-themed:hover {
+  background-color:  #1d76a3;
+}
+
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-title {
+  color: #2A9FD8;
+  margin-top: 20px;
+  font-weight: 150;
+}
+
+.titles {
+  // Text-color
+  color: #878787;
+
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.title-md {
+  margin: auto;
+  width: 10%;
+}
+
+.title-lg {
+  margin: auto;
+  width: 20%;
+}

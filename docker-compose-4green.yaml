@@ -1,0 +1,37 @@
+#
+# Copyright IBM Corp. All Rights Reserved.
+# Unauthorized copying/modification of this file, via any medium is strictly prohibited
+# Proprietary and confidential
+#
+version: '2.1'
+
+
+services:
+
+  client.banque:
+    build: D4greenFront
+    command: ng serve --env banque --host 0.0.0.0
+    container_name: client_loader.banque
+    ports:
+      - 4400:4200
+      - 49154:49153
+
+
+  server.banque:
+    build: D4greenBack
+    container_name: server.banque
+    command: bash -c "cat chaincodeId || (grunt build && echo 'Sleep 20 sec waiting for fabric infrastructure to be ready'; sleep 20; npm run deploy;) && grunt"
+    ports:
+      - 8280:8080 # API
+      - 5878:5858 # Debug
+
+  cdbp.banque:
+    extends:
+      file: compose-defaults.yml
+      service: couchdb-dev
+    container_name: cdbp.banque
+    # volumes:
+    #  - ./resources/data/banque/cdbp:/opt/couchdb/data
+    ports:
+      - 8086:5984
+

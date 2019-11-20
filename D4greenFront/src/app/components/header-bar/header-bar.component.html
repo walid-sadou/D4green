@@ -1,0 +1,28 @@
+<!-- Header bar is not sticky top anymore: We do not display it when user is scrolling -->
+<nav class="navbar navbar-expand sticky-top row justify-content-center">
+  <!-- Navbar content -->
+  <div class="greffe-name">
+  <p class="text-white ">Banque</p>
+  </div>
+  <div *ngFor="let menu of menus" class="menu-link">
+    <a class="nav-link text-white" routerLink="/{{ menu.route }}" routerLinkActive="active">{{ menu.name }}</a>
+  </div>
+
+  <div class="nav-item user-icon">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn rounded" id="dropdownBasic1" ngbDropdownToggle>
+        <i class="fas fa-user"></i>
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu dropdown-menu-right">
+        <button class="dropdown-item">{{ userEmail }}</button>
+        <button class="dropdown-item">{{ company }}</button>
+        <div class="ui divider"></div>
+        <button class="dropdown-item" (click)="logoutUser()">
+          <img src="../../../assets/img/logout.svg"/>
+            Logout
+          </button>
+      </div>
+    </div>
+  </div>
+</nav>
+

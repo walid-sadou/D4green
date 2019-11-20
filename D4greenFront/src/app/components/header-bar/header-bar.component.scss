@@ -1,0 +1,37 @@
+
+nav,
+.nav-bar {
+  padding-right: 0% !important;
+  padding-left: 0% !important;
+
+  background-color: #0b2e13;
+}
+
+.user-icon {
+  position: absolute;
+  right: 10%;
+}
+
+nav,
+.menu-link {
+  height: 70px;
+  font-family: Helvetica;
+  font-weight: lighter;
+  font-size: 1.1em;
+}
+
+.menu-link > a:hover, .active {
+  border-bottom: 3px solid #4B90E0;
+  color: #4B90E0 !important;
+  font-weight: normal;
+}
+
+.menu-link > a {
+  padding-top: 25px;
+  height: 100%;
+}
+
+.greffe-name{
+  position: absolute;
+  left: 10%;
+}

@@ -1,0 +1,33 @@
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-title {
+  color: #2A9FD8;
+  margin-top: 20px;
+  font-weight: 150;
+}
+
+.titles {
+  // Text-color
+  color: #878787;
+
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.title-md {
+  margin: auto;
+  width: 10%;
+}
+
+.title-lg {
+  margin: auto;
+  width: 20%;
+}

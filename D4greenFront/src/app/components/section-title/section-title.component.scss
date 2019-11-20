@@ -1,0 +1,52 @@
+.container {
+  .section-title {
+    height: 65px;
+    background-color: #f7f9fb;
+    margin-left: 0;
+    opacity: 1;
+    z-index: 12;
+    position: fixed;
+    border-bottom: 1px solid rgb(212, 221, 228);
+    .row {
+      padding: 10px 0 10px 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 65px;
+      h2 {
+        font-weight: normal;
+        color: #17191D;
+      }
+      .myButtonIcon {
+        float: left;
+        width: 20px;
+        height: 20px;
+        padding-right: 5px;
+      }
+      .myButton button {
+        min-width: 160px;
+        height: 38px;
+        background-color: #2a9eb7 !important;
+        opacity: 0.6;
+        color: #FFFFFF !important;
+        border-radius: 6px;
+        font-family: 'Lato', sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 20px;
+        letter-spacing: normal;
+      }
+
+      .myButton button:hover {
+        background-color: #2a9eb7 !important;
+        opacity: 0.85;
+      }
+
+      .myButton button:active, button:focus {
+        background-color: #2a9eb7 !important;
+      }
+    }
+  }
+}

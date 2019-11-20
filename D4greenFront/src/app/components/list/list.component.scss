@@ -1,0 +1,116 @@
+.searchbar-wrapper {
+  background-color: rgb(227, 234, 242);
+  min-height: 150px;
+  width: 100%;
+  // Dirty hard coded for vertical align
+  padding-top: 55px;
+}
+
+.btn-themed {
+  background-color:  #2A9FD8;
+}
+
+.btn-themed-approve {
+  background-color: yellowgreen;
+  width: 100px;
+  color : white;
+  border: transparent;
+  margin: 2px;
+}
+
+
+.btn-themed-reject {
+  background-color: red;
+  width: 100px;
+  color: white;
+  border: transparent;
+  margin: 2px;
+}
+
+.btn-themed-subscribe {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-themed:hover, .btn-themed:active {
+  background-color:  #1d76a3;
+}
+
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-title {
+  color: #2A9FD8;
+  margin-top: 20px;
+  font-weight: 150;
+}
+
+.titles {
+  // Text-color
+  color: #878787;
+
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.column-md {
+  margin: auto;
+  width: 10%;
+}
+
+.column-lg {
+  margin: auto;
+  width: 20%;
+}
+
+.column-lg-transac{
+  margin: auto;
+  width: 14%;
+}
+
+
+
+
+.list-row-content-wrapper {
+  border: solid 1px gainsboro;
+
+  // Should be themed
+  width: 100%;
+
+  // Min -height use to extend height if denomination is too long
+  min-height: 90px;
+
+  // Spacer
+  margin-bottom: 20px;
+}
+
+.list-row-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+span {
+  // Margin used for vertical align
+  margin-top: auto;
+  margin-bottom: auto;
+
+  // Text-color
+  color: #b7b7b5;
+}
+
+.details {
+  height: 100%;
+  // background-color: blueviolet;
+}
+
+.wrap-text {
+  word-wrap: break-word;
+}

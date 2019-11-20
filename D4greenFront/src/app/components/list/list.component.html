@@ -1,0 +1,59 @@
+<div *ngIf="display" style="margin-left: 0" class="offset-md-2 col-md-12 text-center list-wrapper" xmlns="http://www.w3.org/1999/html">
+
+  <!-- LIST OF OP VALIDES  -->
+  <ng-container *ngIf="this.listConf.nature == 'OP_ALL_TRANSFERT_SUBSCRIBED'">
+    <div class="titles">
+      <span class="column-lg-transac">ID TRANSFERT</span>
+      <span class="column-md">SIREN</span>
+      <span class="column-md">GREFFE D'ORIGINE</span>
+      <span class="column-md">GREFFE DESTINATAIRE</span>
+      <span class="column-md">EFFECTUE LE </span>
+      <span class="column-lg-transac">ADRESSE ACTUELLE</span>
+      <span class="column-lg-transac">ADRESSE DEMANDEE</span>
+    </div>
+    <div class="list-row-wrapper" *ngFor="let r of results">
+      <div class="list-row-content-wrapper row bg-white" [ngStyle]="{ 'border-left': ('solid 10px ' +  listConf.color)}">
+        <span class="column-lg-transac wrap-text">{{ r.TransfertID }}</span>
+        <span class="column-md wrap-text">{{ r.Siren }}</span>
+        <span class="column-md wrap-text">{{ r.AncienGreffeID }}</span>
+        <span class="column-md wrap-text">{{ r.NouveauGreffeID }}</span>
+        <span class="column-md">{{ makeHumanReadableDate(r.ValidateRejectDate) }}</span>
+        <span class="column-lg-transac wrap-text">{{ getAdresseStringFromAdresseObject(r.AncienneAdresseSiege)}}</span>
+        <span class="column-lg-transac wrap-text">{{ getAdresseStringFromAdresseObject(r.NouvelleAdresseSiege)}}</span>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="this.listConf.nature == 'OP_TRANSFERT_SUBSCRIBED'">
+    <div class="titles">
+      <span class="column-lg-transac">ID TRANSFERT</span>
+      <span class="column-md">GREFFE D'ORIGINE</span>
+      <span class="column-md">GREFFE DESTINATAIRE</span>
+      <span class="column-md">EFFECTUE LE </span>
+      <span class="column-lg-transac">ADRESSE ACTUELLE</span>
+      <span class="column-lg-transac">ADRESSE DEMANDEE</span>
+    </div>
+    <div class="list-row-wrapper" *ngFor="let r of results">
+      <div class="list-row-content-wrapper row bg-white" [ngStyle]="{ 'border-left': ('solid 10px ' +  listConf.color)}">
+        <span class="column-lg-transac wrap-text">{{ r.TransfertID }}</span>
+        <span class="column-md wrap-text">{{ r.AncienGreffeID }}</span>
+        <span class="column-md wrap-text">{{ r.NouveauGreffeID }}</span>
+        <span class="column-md">{{ makeHumanReadableDate(r.ValidateRejectDate) }}</span>
+        <span class="column-lg-transac wrap-text">{{ getAdresseStringFromAdresseObject(r.AncienneAdresseSiege)}}</span>
+        <span class="column-lg-transac wrap-text">{{ getAdresseStringFromAdresseObject(r.NouvelleAdresseSiege)}}</span>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<div *ngIf="!error && !display && !loading" class="offset-md-2 col-md-8 text-center">
+  <span>Aucun transfert</span>
+</div>
+
+<div *ngIf="error && !display && !loading" class="offset-md-2 col-md-8 text-center">
+  <span>{{ error_msg }}</span>
+</div>
+
+<div *ngIf="!display && loading" class="offset-md-2 col-md-8 text-center">
+  <span>Chargement des données...</span>
+</div>

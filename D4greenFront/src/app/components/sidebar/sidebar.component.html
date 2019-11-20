@@ -1,0 +1,7 @@
+<nav class="nav bg-dark blkfr-sidebar">
+  <div class="nav flex-column custom-nav">
+    <div *ngFor="let menu of menus">
+      <app-sidebar-menu [menu]="menu" [active]="active" (onExpand)=onExpand($event)></app-sidebar-menu>
+    </div>
+  </div>
+</nav>

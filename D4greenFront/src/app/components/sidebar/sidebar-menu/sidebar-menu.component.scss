@@ -1,0 +1,66 @@
+a.custom-nav {
+  color: #b8c7ce;
+}
+
+a, li > a:hover,
+li.side-border > a {
+  color: white;
+}
+
+li:hover,
+li.side-border {
+  background-color: rgb(106, 117, 124);
+}
+
+.sub > li {
+  padding-left: 0.5em;
+  background-color: #2c3b41;
+  border-bottom: 1px solid black;
+  border-left: 3px solid #2c3b41;
+}
+
+.sub > li:hover {
+  background-color: rgb(24, 21, 21);
+}
+
+.sub > li:hover,
+li:hover,
+.side-border {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-left: 3px solid white;
+}
+
+// !!! copypasta need to modify in order to properlydisplay stuffs
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+

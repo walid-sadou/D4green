@@ -1,0 +1,6 @@
+<div class="offset-md-2 col-md-8 text-center list-wrapper">
+  <h1 class="text-left list-title">Suivi des abonnements</h1>
+  <app-list [listConf]="this.listConf"
+            (refreshDone)="listRefreshDone()"
+            (approveOrReject)="approveOrReject()"></app-list>
+</div>
