@@ -27,7 +27,7 @@
     "@ng-bootstrap/ng-bootstrap": "~1.1.2",
     "@types/hammerjs": "~2.0.34",
     "@types/socket.io-client": "~1.4.29",
-    "ajv": "~6.4.0",
+    "ajv": "~6.12.3",
     "angular2-notifications": "0.9.7",
     "bootstrap": "~4.1.0",
     "file-system": "2.2.2",
