@@ -29,7 +29,7 @@
     "@types/socket.io-client": "~1.4.29",
     "ajv": "~6.4.0",
     "angular2-notifications": "0.9.7",
-    "bootstrap": "~4.1.0",
+    "bootstrap": "~4.3.1",
     "file-system": "2.2.2",
     "fs": "0.0.1-security",
     "jquery": "~1.9.1",
